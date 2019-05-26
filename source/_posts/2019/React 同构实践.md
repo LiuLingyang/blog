@@ -7,6 +7,7 @@ categories: React
 #  前言
 目前单页面应用（SPA）很是流行，同时也带了一些问题，如SEO不友好，首屏加载慢等，为了解决上述问题，所谓的服务端渲染就粉墨登场了。
 React 作为一个 SPA 应用开发框架同时也支持服务端渲染，本文将详细介绍如何搭建一个 React 服务端渲染的项目。
+如果你倾向于开箱即用的体验，可以尝试更高层次的解决方案 [Next.js](https://nextjs.org/)。
 
 在你阅读之前，你需要具备以下技术能力：
 > * React 全家桶
@@ -490,6 +491,6 @@ npm run start
 ```
 # 总结
 到这里，整个 React 同构体系中关键知识点的原理就串联起来了。
-当然，本文所涉及的同构知识还是非常有限，下一篇中我还将介绍同构中异步数据的获取 + Redux 的使用及同构中碰到的一些疑难杂症。
+当然，本文所涉及的同构知识还是非常有限，下一篇中我还将介绍同构中异步数据的获取 + Redux 的使用。
 如果你看了文章觉得云里雾里，可以将代码自行 fork 下来跑一跑，我相信可以帮助到你。
 工程地址：[https://github.com/LiuLingyang/react-ssr-framework](https://github.com/LiuLingyang/react-ssr-framework)
