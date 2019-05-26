@@ -106,7 +106,7 @@ export {
 ```
 ## 服务端配置
 这么多 webpack 配置文件里，其实只有 webpack.server.config.js 是给服务端用的，因为服务端配置无需区分开发环境还是生成环境。
-服务端运行于 node 中，不支持 babel，不支持样式，同时也不支持一些浏览器全局对象如 window、document，对于 babel 使用 babel-loader 进行转换，对于样式使用插件提取出来，服务端只运行 js 生成 html 片段，样式由客户端打包并供浏览器下载执行。不过这么做，由于页面上的样式实际上最终是由客户端渲染时添加上的，所以页面可能会存在一开始没有样式的情况，为了解决这个问题， 我们可以在服务器端渲染时，拿到 isomorphic-style-loader 返回的样式代码，然后以字符串的形式添加到服务器端渲染的 HTML 之中。
+服务端运行于 node 中，不支持 babel，不支持样式，同时也不支持一些浏览器全局对象如 window、document，对于 babel 使用 babel-loader 进行转换，对于样式使用插件提取出来，服务端只运行 js 生成 html 片段，再根据客户端清单将 css 插入到 head 中。
 ``` js
 'use strict';
 const utils = require('./utils');
